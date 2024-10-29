@@ -15,6 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         clientId="u4qCw8azOMWpitq4awZCzf4sQ9C9TTJw"
         authorizationParams={{
           // redirect_uri: 'http://localhost:5173/chatbot',
+          // redirect_uri: 'https://chat-with-vidf-fdahoxcca-hetchaudhari123s-projects.vercel.app/chatbot',
           redirect_uri: 'https://chat-with-vidf-fdahoxcca-hetchaudhari123s-projects.vercel.app/chatbot',
         }}
         cacheLocation="localstorage"
