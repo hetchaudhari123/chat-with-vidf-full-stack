@@ -10,7 +10,8 @@ import uuid  # Importing the uuid module
 from dotenv import load_dotenv
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}})
+# CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}})
+CORS(app, resources={r"/*": {"origins": "https://chat-with-vidf-fdahoxcca-hetchaudhari123s-projects.vercel.app"}})
 
 load_dotenv()
 # MongoDB Configuration

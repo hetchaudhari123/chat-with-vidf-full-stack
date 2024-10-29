@@ -173,7 +173,8 @@ const ButtonWithModal = ({ theme, handleSend }) => {
         formData.append('file_type', fileType); // Append the file type
 
         // Send the file to the server
-        const response = await fetch('http://127.0.0.1:5000/file/upload', {
+        // const response = await fetch('http://127.0.0.1:5000/file/upload', {
+        const response = await fetch('https://chat-with-vidf.onrender.com/file/upload', {
           method: 'POST',
           body: formData, // Send form data
         });
@@ -220,7 +221,8 @@ const ButtonWithModal = ({ theme, handleSend }) => {
       // If you need to send a request to the server to notify about the new conversation, you can do that here.
       try {
         // Assuming you have an endpoint to handle the new conversation, e.g., 'http://127.0.0.1:5000/new-conversation'
-        const response = await fetch('http://127.0.0.1:5000/clear-history', {
+        // const response = await fetch('http://127.0.0.1:5000/clear-history', {
+        const response = await fetch('https://chat-with-vidf.onrender.com/clear-history', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

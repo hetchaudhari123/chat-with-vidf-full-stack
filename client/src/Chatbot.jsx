@@ -20,7 +20,14 @@ const Chatbot = () => {
     if (user) {
       const fetchChatHistory = async () => {
         try {
-          const response = await fetch('http://127.0.0.1:5000/get-chat-history', { 
+          // const response = await fetch('http://127.0.0.1:5000/get-chat-history', { 
+          //   method: 'POST',
+          //   headers: {
+          //     'Content-Type': 'application/json'
+          //   },
+          //   body: JSON.stringify({ email: user.email }) // Assuming user.email is available
+          // });
+          const response = await fetch('https://chat-with-vidf.onrender.com/get-chat-history', { 
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
@@ -71,7 +78,8 @@ const Chatbot = () => {
       console.log("Character............",selectedCharacter)
       console.log("Character Name............",selectedCharacter?.character_name)
       console.log("Character Info............",selectedCharacter?.character_info)
-      const response = await fetch('http://127.0.0.1:5000/user/ask', {
+      // const response = await fetch('http://127.0.0.1:5000/user/ask', {
+      const response = await fetch('https://chat-with-vidf.onrender.com/user/ask', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
