@@ -14,7 +14,7 @@ import Chatbot from '../Chatbot';
 
   useEffect(() => {
     // console.log(user);
-    now_context.set_google_user(user);
+    // now_context.set_google_user(user);
   }, [user, now_context]);
 
   const routes = useRoutes([
