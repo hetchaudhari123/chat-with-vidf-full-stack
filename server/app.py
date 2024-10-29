@@ -28,6 +28,12 @@ aai.settings.api_key = os.getenv("ASSEMBLY_AI_KEY")
 # Initialize the Transcriber
 transcriber = aai.Transcriber()
 
+
+
+@app.route('/')
+def home():
+    return "Welcome to the Chat-With-ViDF!"
+
 def upload_to_gemini(path, mime_type=None):
     """Uploads the given file to Google Generative AI (Gemini).
 
