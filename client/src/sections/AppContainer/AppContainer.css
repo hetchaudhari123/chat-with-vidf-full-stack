@@ -1,0 +1,41 @@
+.app-container {
+  display: flex;
+  height: 100svh; 
+  overflow: hidden;
+}
+
+.app-container > * {
+  max-height: 100%;
+  overflow: hidden; /* Ensure child elements do not overflow */
+}
+
+
+.loading-message {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #555; /* Change this to your desired color */
+  /* text-align: center; */
+}
+
+
+
+/* .overflow-y-auto::-webkit-scrollbar {
+  width: 10px; 
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px; 
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px; 
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+} */
+
+
+
