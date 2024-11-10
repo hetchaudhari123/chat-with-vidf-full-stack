@@ -34,38 +34,38 @@ transcriber = aai.Transcriber()
 @app.route('/')
 def home():
     return "Welcome to the Chat-With-ViDF!"
+# # Not currently used
+# def upload_to_gemini(path, mime_type=None):
+#     """Uploads the given file to Google Generative AI (Gemini).
 
-def upload_to_gemini(path, mime_type=None):
-    """Uploads the given file to Google Generative AI (Gemini).
+#     Arguments:
+#     - path (str): Path to the file on the local file system.
+#     - mime_type (str, optional): The MIME type of the file (e.g., "application/pdf").
 
-    Arguments:
-    - path (str): Path to the file on the local file system.
-    - mime_type (str, optional): The MIME type of the file (e.g., "application/pdf").
+#     Returns:
+#     - file (object): The uploaded file object from Gemini, which contains properties like `uri`.
+#     """
+#     file = genai.upload_file(path, mime_type=mime_type)
+#     print(f"Uploaded file '{file.display_name}' as: {file.uri}")
+#     return file
+# # Not currently used
+# def wait_for_files_active(files):
+#     """Waits for the given files to be active.
 
-    Returns:
-    - file (object): The uploaded file object from Gemini, which contains properties like `uri`.
-    """
-    file = genai.upload_file(path, mime_type=mime_type)
-    print(f"Uploaded file '{file.display_name}' as: {file.uri}")
-    return file
-
-def wait_for_files_active(files):
-    """Waits for the given files to be active.
-
-    Arguments:
-    - files (list): A list of file objects to check their status.
-    """
-    print("Waiting for file processing...")
-    for name in (file.name for file in files):
-        file = genai.get_file(name)
-        while file.state.name == "PROCESSING":
-            print(".", end="", flush=True)
-            time.sleep(10)
-            file = genai.get_file(name)
-        if file.state.name != "ACTIVE":
-            raise Exception(f"File {file.name} failed to process")
-    print("...all files ready")
-    print()
+#     Arguments:
+#     - files (list): A list of file objects to check their status.
+#     """
+#     print("Waiting for file processing...")
+#     for name in (file.name for file in files):
+#         file = genai.get_file(name)
+#         while file.state.name == "PROCESSING":
+#             print(".", end="", flush=True)
+#             time.sleep(10)
+#             file = genai.get_file(name)
+#         if file.state.name != "ACTIVE":
+#             raise Exception(f"File {file.name} failed to process")
+#     print("...all files ready")
+#     print()
 
 # Create the model configuration
 generation_config = {
@@ -75,12 +75,12 @@ generation_config = {
     "max_output_tokens": 8192,
     "response_mime_type": "text/plain",
 }
-
-model = genai.GenerativeModel(
-    model_name="gemini-1.5-flash",
-    generation_config=generation_config,
-    system_instruction="You are Tyrion Lannister from Game of Thrones. Every response you give should reflect Tyrion's wit, intelligence, and subtle sarcasm. Respond to every question or conversation with his characteristic tone — clever, thoughtful, often humorous, and occasionally a touch cynical. Keep your answers concise yet impactful, as Tyrion would, but ensure you stay respectful and insightful, focusing on the deeper meanings behind things, as Tyrion often does. When possible, make use of memorable phrases or metaphors that align with Tyrion’s style. Avoid modern slang and maintain the eloquence of a seasoned nobleman. Also for whatever question asked, try to answer it as if you are a good teacher.",
-)
+# not used currently 
+# model = genai.GenerativeModel(
+#     model_name="gemini-1.5-flash",
+#     generation_config=generation_config,
+#     system_instruction="You are Tyrion Lannister from Game of Thrones. Every response you give should reflect Tyrion's wit, intelligence, and subtle sarcasm. Respond to every question or conversation with his characteristic tone — clever, thoughtful, often humorous, and occasionally a touch cynical. Keep your answers concise yet impactful, as Tyrion would, but ensure you stay respectful and insightful, focusing on the deeper meanings behind things, as Tyrion often does. When possible, make use of memorable phrases or metaphors that align with Tyrion’s style. Avoid modern slang and maintain the eloquence of a seasoned nobleman. Also for whatever question asked, try to answer it as if you are a good teacher.",
+# )
 
 
 
