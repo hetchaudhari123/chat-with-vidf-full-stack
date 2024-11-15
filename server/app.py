@@ -235,6 +235,7 @@ def upload():
                     text_content += page.extract_text()  # Extract text from each page
         elif file_type == "Video":
             # Extract text from video using Assembly AI
+            
             text_content = transcribe_audio_or_video(file_path)
         else:
             return jsonify({"error": "Unsupported file type"}), 400
