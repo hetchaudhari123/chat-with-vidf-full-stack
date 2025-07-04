@@ -1,6 +1,8 @@
 
 # Chat with VIDF - Full Stack
 
+![Homepage](/assets/homepage.png)
+
 A powerful, context-aware conversational AI application that enables intelligent Q&A with document understanding, video analysis, and customizable AI characters.
 
 ## ✨ Features
@@ -46,6 +48,7 @@ A powerful, context-aware conversational AI application that enables intelligent
     git clone https://github.com/hetchaudhari123/chat-with-vidf-full-stack.git
     cd chat-with-vidf-full-stack
     
+    
     ```
     
 2.  **Install dependencies**
@@ -59,6 +62,7 @@ A powerful, context-aware conversational AI application that enables intelligent
     cd ../client
     npm install
     
+    
     ```
     
 3.  **Set up environment variables**
@@ -69,6 +73,7 @@ A powerful, context-aware conversational AI application that enables intelligent
     touch .env
     
     # Add your API keys and configuration (see Configuration section below)
+    
     
     ```
     
@@ -82,6 +87,7 @@ A powerful, context-aware conversational AI application that enables intelligent
     # Start client (in a new terminal)
     cd client
     npm start
+    
     
     ```
     
@@ -146,24 +152,11 @@ A powerful, context-aware conversational AI application that enables intelligent
 ```
 chat-with-vidf-full-stack/
 ├── client/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── contexts/
-│   │   ├── services/
-│   │   └── App.js
-│   └── public/
 ├── server/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── middleware/
-│   ├── utils/
-│   └── server.js
 ├── .gitignore
 ├── Project Documentation.docx
 ├── README.md
-└── package.json
+
 
 ```
 
@@ -175,7 +168,7 @@ Create a `.env` file in the **server** directory with the following required var
 
 ```env
 # Server Configuration
-PORT=5000
+PORT=
 
 # Database
 MONGO_URI=mongodb://localhost:27017/chat-vidf
@@ -195,6 +188,7 @@ CLOUDINARY_API_SECRET=your_cloudinary_api_secret
 # Optional Configuration
 MAX_FILE_SIZE=50MB
 UPLOAD_DIR=./uploads
+
 
 ```
 
