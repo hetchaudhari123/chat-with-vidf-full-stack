@@ -223,11 +223,7 @@ UPLOAD_DIR=./uploads
 
 This project is licensed under the MIT License - see the [LICENSE](https://claude.ai/chat/LICENSE) file for details.
 
-## 🐛 Known Issues
 
--   Large video files may take longer to process
--   PDF processing is limited to text-based content
--   Character responses may vary based on context length
 
 ## 🗺️ Roadmap
 
