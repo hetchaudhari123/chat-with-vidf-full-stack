@@ -10,9 +10,9 @@ import uuid  # Importing the uuid module
 from dotenv import load_dotenv
 
 app = Flask(__name__)
-# CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}})
+CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}})
 # CORS(app, resources={r"/*": {"origins": "https://chat-with-vidf-fdahoxcca-hetchaudhari123s-projects.vercel.app"}})
-CORS(app, resources={r"/*": {"origins": "https://chat-with-vidf-flax.vercel.app"}})
+# CORS(app, resources={r"/*": {"origins": "https://chat-with-vidf-flax.vercel.app"}})
 
 load_dotenv()
 # MongoDB Configuration
@@ -164,7 +164,8 @@ def ask():
 
     # Start chat session with the current question included in history
     model = genai.GenerativeModel(
-        model_name="gemini-1.5-flash",
+        # model_name="gemini-1.5-flash",
+        model_name="gemini-2.5-pro",
         generation_config=generation_config,
         system_instruction=system_instruction
     )
