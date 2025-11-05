@@ -110,8 +110,8 @@ const CharacterModal = ({ theme, characters, setCharacters, isOpen, onClose, set
   const handleConfirm = async () => {
     try {
       
-      // const response = await fetch("https://chat-with-vidf.onrender.com/character/add", {
-      const response = await fetch("http://127.0.0.1:5000/character/add", {
+      // const response = await fetch("http://127.0.0.1:5000/character/add", {
+        const response = await fetch("https://chat-with-vidf.onrender.com/character/add", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

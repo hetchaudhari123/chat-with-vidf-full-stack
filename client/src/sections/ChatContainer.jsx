@@ -114,8 +114,8 @@ const ChatContainer = () => {
               <LogoutItem
                 onClick={async () => {
                   try {
-                    await logout({ returnTo: "http://localhost:5173/" });
-                    // await logout({ returnTo: "https://chat-with-vidf-flax.vercel.app" });
+                    // await logout({ returnTo: "http://localhost:5173/" });
+                    await logout({ returnTo: "https://chat-with-vidf-flax.vercel.app" });
                   } catch (error) {
                     console.error('Logout error:', error);
                     alert('Oops! Something went wrong while logging out. Please try again.');

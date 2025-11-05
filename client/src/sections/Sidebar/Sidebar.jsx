@@ -57,8 +57,8 @@ const Sidebar = ({ theme, setIsDarkTheme, isDarkTheme, handleSend }) => {
 
       const fetchCharacters = async () => {
         try {
-          // const response = await fetch("https://chat-with-vidf.onrender.com/character/list", {
-            const response = await fetch("http://127.0.0.1:5000/character/list", {
+          // const response = await fetch("http://127.0.0.1:5000/character/list", {
+          const response = await fetch("https://chat-with-vidf.onrender.com/character/list", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -80,8 +80,8 @@ const Sidebar = ({ theme, setIsDarkTheme, isDarkTheme, handleSend }) => {
       };
       const fetchFileContent = async () => {
         try {
-          // const response = await fetch("https://chat-with-vidf.onrender.com/get-file-name", {
-            const response = await fetch("http://127.0.0.1:5000/get-file-name", {
+          // const response = await fetch("http://127.0.0.1:5000/get-file-name", {
+            const response = await fetch("https://chat-with-vidf.onrender.com/get-file-name", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -146,8 +146,8 @@ const Sidebar = ({ theme, setIsDarkTheme, isDarkTheme, handleSend }) => {
     // setColl(table);
     // print(table)
 
-    const url = isMySQL ? 'http://127.0.0.1:5000/mysql/connect' : 'http://127.0.0.1:5000/connect';
-    // const url = isMySQL ? 'https://chat-with-database-api.vercel.app/mysql/connect' : 'https://chat-with-database-api.vercel.app/connect';
+    // const url = isMySQL ? 'http://127.0.0.1:5000/mysql/connect' : 'http://127.0.0.1:5000/connect';
+    const url = isMySQL ? 'https://chat-with-database-api.vercel.app/mysql/connect' : 'https://chat-with-database-api.vercel.app/connect';
 
     try {
       const response = await fetch(url, {
@@ -197,8 +197,8 @@ const Sidebar = ({ theme, setIsDarkTheme, isDarkTheme, handleSend }) => {
           setCharacterList((prevList) => 
             prevList.filter((item) => item.character_id !== character.character_id) // Adjust this according to your data structure
         );
-        // const response = await fetch(`https://chat-with-vidf.onrender.com/character/remove`, {
-        const response = await fetch(`http://127.0.0.1:5000/character/remove`, {
+        // const response = await fetch(`http://127.0.0.1:5000/character/remove`, {
+        const response = await fetch(`https://chat-with-vidf.onrender.com/character/remove`, {
             method: 'POST', // Use DELETE method to remove the character
             headers: {
                 'Content-Type': 'application/json',
